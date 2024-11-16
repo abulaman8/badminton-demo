@@ -1,0 +1,63 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% load static tailwind_tags %}
+{% block custom_css %}
+{% endblock %}
+{% block title %} Dashboard {% endblock %}
+{% block content %}
+<div class="flex flex-wrap m-4 p-4 justify-center gap-8">
+	<div class="card card-compact bg-base-100 w-80 shadow-xl text-black">
+		<figure>
+			<img
+					src="{% static 'img/logo.jpeg' %}"
+					alt="Shoes"
+					width="320px" />
+		</figure>
+		<div class="card-body">
+			<h2 class="card-title">Accuracy Analysis</h2>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, debitis.</p>
+			<div class="card-actions justify-between">
+				<a href="/analyse/accuracy/corner" class="btn btn-primary">Corner view</a>
+				<a href="/analyse/accuracy/back" class="btn btn-primary">Back view</a>
+
+			</div>
+		</div>
+	</div>
+	<div class="card card-compact bg-base-100 w-80 shadow-xl text-black">
+		<figure>
+			<img
+					src="{% static 'img/logo.jpeg' %}"
+					alt="Shoes"
+					width="320px" />
+		</figure>
+		<div class="card-body">
+			<h2 class="card-title">Rally Analysis</h2>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, debitis.</p>
+			<div class="card-actions justify-between">
+				<a href="/analyse/rally/corner" class="btn btn-primary">Corner view</a>
+				<a href="/analyse/rally/back" class="btn btn-primary">Back view</a>
+
+			</div>
+		</div>
+	</div>
+	<div class="card card-compact bg-base-100 w-80 shadow-xl text-black">
+		<figure>
+			<img
+					src="{% static 'img/logo.jpeg' %}"
+					alt="Shoes"
+					width="320px" />
+		</figure>
+		<div class="card-body">
+			<h2 class="card-title">Shadow Analysis</h2>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, debitis.</p>
+			<div class="card-actions justify-between">
+				<a href="/analyse/shadow/corner" class="btn btn-primary">Corner view</a>
+				<a href="/analyse/shadow/back" class="btn btn-primary">Back view</a>
+
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
+
+

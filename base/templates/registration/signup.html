@@ -1,0 +1,136 @@
+{% extends "base/base.html" %}
+
+{% block content %}
+<div class="flex justify-center items-center overflow-auto">
+    <div class="w-full max-w-lg bg-transparent rounded-lg shadow-md p-6 max-h-[90vh]">
+        <h2 class="text-2xl font-bold text-center mb-6">Sign Up</h2>
+        <form method="post" class="space-y-4">
+            {% csrf_token %}
+
+            <!-- Email -->
+            <div class="form-control">
+                <label class="label text-white">
+                    <span class="label text-white-text">Email</span>
+                </label>
+                <input
+                    type="email"
+                    name="email"
+                    class="input text-black input-bordered w-full"
+                    placeholder="email"
+                    required
+                />
+            </div>
+            
+            <!-- Username -->
+            <div class="form-control">
+                <label class="label text-white">
+                    <span class="label text-white-text">Username</span>
+                </label>
+                <input
+                    type="text"
+                    name="username"
+                    class="input text-black input-bordered w-full"
+                    placeholder="username"
+                    required
+                />
+            </div>
+
+            <!-- Password -->
+            <div class="form-control">
+                <label class="label text-white">
+                    <span class="label text-white-text">Password</span>
+                </label>
+                <input
+                    type="password"
+                    name="password"
+                    class="input text-black input-bordered w-full"
+                    placeholder="password"
+                    required
+                />
+            </div>
+
+            <!-- Name -->
+            <div class="form-control">
+                <label class="label text-white">
+                    <span class="label text-white-text">Name</span>
+                </label>
+                <input
+                    type="text"
+                    name="name"
+                    class="input text-black input-bordered w-full"
+                    placeholder="full name"
+                    required
+                />
+            </div>
+
+            <!-- Player Type -->
+            <div class="form-control">
+                <label class="label text-white">
+                    <span class="label text-white-text">Player Type</span>
+                </label>
+                <select name="player_type" class="select text-black select-bordered w-full" required>
+                    <option value="Professional">Professional</option>
+                    <option value="Grassroot">Grassroot</option>
+                    <option value="Enthusiast">Enthusiast</option>
+                </select>
+            </div>
+
+            <!-- Age -->
+            <div class="form-control">
+                <label class="label text-white">
+                    <span class="label text-white-text">Age</span>
+                </label>
+                <input
+                    type="number"
+                    name="age"
+                    class="input text-black input-bordered w-full"
+                    placeholder="age"
+                    required
+                />
+            </div>
+
+            <!-- Dominant Hand -->
+            <div class="form-control">
+                <label class="label text-white">
+                    <span class="label text-white-text">Dominant Hand</span>
+                </label>
+                <select name="dominant_hand" class="select text-black select-bordered w-full" required>
+                    <option value="Left">Left</option>
+                    <option value="Right">Right</option>
+                </select>
+            </div>
+
+            <!-- Gender -->
+            <div class="form-control">
+                <label class="label text-white">
+                    <span class="label text-white-text">Gender</span>
+                </label>
+                <select name="gender" class="select text-black select-bordered w-full" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <!-- Focus -->
+            <div class="form-control">
+                <label class="label text-white">
+                    <span class="label text-white-text">Focus</span>
+                </label>
+                <select name="focus" class="select text-black select-bordered w-full" required>
+                    <option value="Technique">Technique</option>
+                    <option value="Strategy">Strategy</option>
+                    <option value="Speed">Speed</option>
+                    <option value="Fitness">Fitness</option>
+                    <option value="Concentration">Concentration</option>
+                </select>
+            </div>
+
+            <!-- Sign Up Button -->
+            <div class="form-control mt-4">
+                <button type="submit" class="btn btn-secondary w-full">Sign Up</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

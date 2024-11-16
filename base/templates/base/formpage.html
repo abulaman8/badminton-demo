@@ -1,0 +1,34 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% load static tailwind_tags %}
+{% block custom_css %}
+{% endblock %}
+{% block title %} Analysis {% endblock %}
+{% block content %}
+<div class="flex lg:flex-row flex-col m-4 p-4 justify-center gap-4 text-left">
+	<div class="flex w-full flex-col justify-center">
+		<h3 class="text-3xl">Camera Guidelines</h3>
+		<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error ipsa maxime non nobis quia cumque alias corrupti architecto, tempora vero voluptates veniam, eius voluptate?</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, ipsam, ipsa culpa dolorum odit consequatur magnam iste voluptatem mollitia reprehenderit doloribus numquam accusamus ipsum eveniet odio cupiditate autem fugit voluptatibus!</p>
+		<ul class="list-disc">
+			<li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+			<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio praesentium animi perspiciatis?</li>
+			<li>Lorem ipsum dolor sit amet consectetur.</li>
+
+		</ul>
+		<h4 class="text-2xl">Lorem, ipsum dolor.</h4>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, natus. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis explicabo quos ipsa inventore nemo temporibus. Accusantium optio ducimus, excepturi suscipit quibusdam fugit dolorem ratione pariatur. Itaque error eius beatae non sit quidem aperiam asperiores.</p>
+	</div>
+	<div class="flex w-full flex-col justify-center">
+		<img src="{% static 'img/bg.jpeg' %}" alt="view image" height="400px">
+		<form action="/analyse/{{ action }}/{{ view }}" method="post" enctype="multipart/form-data">
+			{% csrf_token %}
+			<input type="file" class="file-input file-input-bordered file-input-accent w-full max-w-xs" name="file" />
+			<button class="btn btn-secondary mt-4" type="submit">Submit</button>
+		</form>
+	</div>
+</div>
+{% endblock %}
+
+

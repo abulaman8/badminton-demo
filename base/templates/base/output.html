@@ -1,0 +1,50 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% load static tailwind_tags %}
+{% block custom_css %}
+<link href="https://vjs.zencdn.net/8.0.4/video-js.css" rel="stylesheet">
+{% endblock %}
+{% block title %} Output {% endblock %}
+{% block content %}
+<div class="flex lg:flex-row flex-col m-4 p-4 justify-center gap-4 text-left">
+	<div class="flex w-full flex-col justify-center items-center">
+		<h3 class="text-3xl my-4">{{ title1 }}</h3>
+		<video class="video-js" controls preload="auto">
+			<source src="{{ vid1 }}" type="video/mp4">
+			<p class="vjs-no-js">
+			To view this video please enable JavaScript, and consider upgrading to a
+			web browser that
+			<a href="https://videojs.com/html5-video-support/" target="_blank">
+				supports HTML5 video
+			</a>
+			</p>
+		</video>
+	</div>
+	{% if img %}
+	<div class="flex w-full flex-col justify-center">
+		<h3 class="text-3xl">{{ title2 }}</h3>
+
+		<img src="{{ img }}" alt="view image" height="400px">
+	</div>
+	{% elif vid2 %}
+	<div class="flex w-full flex-col justify-center items-center">
+		<h3 class="text-3xl my-4">{{ title2 }}</h3>
+
+		<video class="video-js" controls preload="auto">
+			<source src="{{ vid2 }}" type="video/mp4">
+			<p class="vjs-no-js">
+			To view this video please enable JavaScript, and consider upgrading to a
+			web browser that
+			<a href="https://videojs.com/html5-video-support/" target="_blank">
+				supports HTML5 video
+			</a>
+			</p>
+		</video>
+	</div>
+	{% endif %}
+</div>
+{% endblock %}
+
+{% block custom_js %}
+<script src="https://vjs.zencdn.net/8.0.4/video.js"></script>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% load static tailwind_tags %}
+{% block custom_css %}
+<style>
+    .content {
+      margin: 0;
+      padding: 0;
+      height: 91vh; /* Full viewport height */
+    }
+
+  </style>
+{% endblock %}
+{% block title %} Home {% endblock %}
+{% block content %}
+<div class="content flex flex-col justify-around items-center p-16">
+	<img src="{% static 'img/logo_rm.png' %}" alt="Shuttle Smart Vision" width="350px">
+	<div class="flex flex-col py-4">
+	<h2 class="text-6xl">Shuttle Smart Vision</h2>
+	<h3 class="text-3xl">Analyze, Improve, Achieve</h3>
+	</div>
+	<a href="{% if user.is_authenticated %}{% url 'dashboard' %}{% else %}{% url 'signup' %}{% endif %}" class="btn btn-secondary mt-4">
+		Get Started
+	</a>
+	
+</div>
+{% endblock %}
+

@@ -1,0 +1,47 @@
+
+{% extends "base/base.html" %}
+
+{% block content %}
+<div class="flex justify-center items-center min-h-[90vh]">
+    <div class="w-full max-w-lg bg-transparent rounded-lg shadow-md p-6">
+        <h2 class="text-2xl font-bold text-center mb-6">Sign In</h2>
+        <form method="post" class="space-y-4">
+            {% csrf_token %}
+
+            <!-- Email -->
+            
+            <!-- Username -->
+            <div class="form-control">
+                <label class="label text-white">
+                    <span class="label text-white-text">Username</span>
+                </label>
+                <input
+                    type="text"
+                    name="username"
+                    class="input text-black input-bordered w-full"
+                    placeholder="username"
+                    required
+                />
+            </div>
+
+            <!-- Password -->
+            <div class="form-control">
+                <label class="label text-white">
+                    <span class="label text-white-text">Password</span>
+                </label>
+                <input
+                    type="password"
+                    name="password"
+                    class="input text-black input-bordered w-full"
+                    placeholder="password"
+                    required
+                />
+            </div>
+
+            <div class="form-control mt-4">
+                <button type="submit" class="btn btn-secondary w-full">Sign In</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
