@@ -105,26 +105,26 @@ def formpage(request, action, view):
             },
             "rally": {
                 "corner": {
-                    "title1": "Rally Analysis",
-                    "title2": "Output 2",
-                    "vid1": staticfiles_storage.url("vid/sample.mp4"),
-                    "vid2": staticfiles_storage.url("vid/sample.mp4"),
+                    "title1": "Player Analysis",
+                    "title2": "Shuttle Detection",
+                    "vid1": staticfiles_storage.url("vid/rally_corner_1.mp4"),
+                    "vid2": staticfiles_storage.url("vid/rally_corner_2.mp4"),
                 },
                 "back": {
-                    "title1": "Rally Analysis",
-                    "title2": "Output 2",
-                    "vid1": staticfiles_storage.url("vid/sample.mp4"),
-                    "vid2": staticfiles_storage.url("vid/sample.mp4"),
+                    "title1": "Player Analysis",
+                    "title2": "Shuttle Detection",
+                    "vid1": staticfiles_storage.url("vid/rally_back_1.mp4"),
+                    "vid2": staticfiles_storage.url("vid/rally_back_2.mp4"),
                 }
             },
             "accuracy": {
                 "corner": {
                     "title1": "Accuracy Analysis",
-                    "vid1": staticfiles_storage.url("vid/sample.mp4"),
+                    "vid1": staticfiles_storage.url("vid/acc_output.mp4"),
                 },
                 "back": {
                     "title1": "Accuracy Analysis",
-                    "vid1": staticfiles_storage.url("vid/sample.mp4"),
+                    "vid1": staticfiles_storage.url("vid/acc_output.mp4"),
                 }
             }
         }
@@ -142,3 +142,7 @@ def formpage(request, action, view):
         'view': view
     }
     return render(request, 'base/formpage.html', context)
+
+
+def about(request):
+    return render(request, 'base/about.html')

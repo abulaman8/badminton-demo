@@ -6,10 +6,10 @@
 {% endblock %}
 {% block title %} Output {% endblock %}
 {% block content %}
-<div class="flex lg:flex-row flex-col m-4 p-4 justify-center gap-4 text-left">
-	<div class="flex w-full flex-col justify-center items-center">
-		<h3 class="text-3xl my-4">{{ title1 }}</h3>
-		<video class="video-js" controls preload="auto">
+<div class="flex lg:flex-row flex-col p-4 justify-around gap-4 text-left max-h-[88vh]">
+	<div class="flex w-full flex-col justify-around items-center">
+		<h3 class="text-3xl">{{ title1 }}</h3>
+		<video class="video-js" controls preload="auto" style="width: 90%; height: 90%; background-color: transparent">
 			<source src="{{ vid1 }}" type="video/mp4">
 			<p class="vjs-no-js">
 			To view this video please enable JavaScript, and consider upgrading to a
@@ -27,10 +27,10 @@
 		<img src="{{ img }}" alt="view image" height="400px">
 	</div>
 	{% elif vid2 %}
-	<div class="flex w-full flex-col justify-center items-center">
+	<div class="flex w-full flex-col justify-around items-center">
 		<h3 class="text-3xl my-4">{{ title2 }}</h3>
-
-		<video class="video-js" controls preload="auto">
+2
+		<video class="video-js" controls preload="auto" style="width: 90%; height: 90%; background-color: transparent">
 			<source src="{{ vid2 }}" type="video/mp4">
 			<p class="vjs-no-js">
 			To view this video please enable JavaScript, and consider upgrading to a

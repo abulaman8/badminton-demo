@@ -43,7 +43,8 @@
 				<a href="{% url 'login' %}" class="mx-2">Login</a>
 				<a href="{% url 'signup' %}" class="mx-2">Register</a>
 				{% endif %}
-				<a class="mx-2">About</a>
+				<a href="{% url 'about' %}" class="mx-2">About</a>
+
 			</div>
 		</div>
 		{% if messages %}

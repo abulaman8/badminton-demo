@@ -1,0 +1,73 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% load static tailwind_tags %}
+{% block custom_css %}
+<style>
+.content {
+	margin: 0;
+	padding: 0;
+	height: 91vh; /* Full viewport height */
+}
+
+</style>
+{% endblock %}
+{% block title %} Home {% endblock %}
+{% block content %}
+<div class="content flex flex-col justify-around items-center p-16">
+	<h1 class="text-5xl">About Us</h1>
+	<div class="carousel rounded-box max-w-[500px]">
+		<div class="carousel-item">
+			<img
+					src="{% static "img/car1.png" %}"
+					alt="Burger" />
+		</div>
+		<div class="carousel-item">
+			<img
+					src="{% static "img/car2.png" %}"
+					alt="Burger" />
+		</div>
+		<div class="carousel-item">
+			<img
+					src="{% static "img/car3.png" %}"
+					alt="Burger" />
+		</div>
+	</div>
+	<div class="flex flex-col text-left">
+		<h3 class="text-3xl">From the Developer's Desk: Our Story</h3>
+		<p>My journey with badminton began long before I ever touched a smartphone or dived into the world of app development. As a passionate player, badminton wasn’t just a sport to me—it was a way of life. The thrill of each rally, the joy of every smash, and even the frustration of missed shots shaped who I am today.</p>
+		<p> Like many athletes, I faced my fair share of challenges. There were times when progress felt stagnant, moments when understanding my weaknesses seemed impossible, and instances where I wished for a clearer way to track my improvement.</p>
+		<p>That's when the idea hit me: What if there was a way to visualize my growth, to get real, actionable insights that could truly elevate my game? Combining my love for badminton with my technical background , Shuttle Smart Vision was born.</p>
+	</div>
+
+</div>
+{% endblock %}
+
+{% block custom_js %}
+<script>
+	// Select the carousel
+	const carousel = document.querySelector('.carousel');
+	const items = carousel.querySelectorAll('.carousel-item');
+
+	// Add click event listeners to each carousel item for navigation
+	let currentIndex = 0;
+
+	function showSlide(index) {
+		// Ensure the index is within bounds
+		currentIndex = (index + items.length) % items.length;
+
+		// Scroll to the active item
+		items[currentIndex].scrollIntoView({
+			behavior: 'smooth',
+			inline: 'center'
+		});
+	}
+
+	// Auto-advance the carousel every 3 seconds
+	setInterval(() => {
+		showSlide(currentIndex + 1);
+	}, 3000);
+
+	// Optional: Add manual navigation (if required, e.g., dots or arrows)
+
+</script>
+{% endblock %}

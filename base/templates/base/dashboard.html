@@ -5,17 +5,17 @@
 {% endblock %}
 {% block title %} Dashboard {% endblock %}
 {% block content %}
-<div class="flex flex-wrap m-4 p-4 justify-center gap-8">
-	<div class="card card-compact bg-base-100 w-80 shadow-xl text-black">
+<div class="flex flex-wrap m-4 p-4 justify-center gap-8 max-h-[88vh] overflow-auto">
+	<div class="card card-compact bg-base-100 w-72 shadow-xl text-black">
 		<figure>
 			<img
-					src="{% static 'img/logo.jpeg' %}"
+					src="{% static 'img/acc.jpeg' %}"
 					alt="Shoes"
-					width="320px" />
+					width="288px" />
 		</figure>
-		<div class="card-body">
+		<div class="card-body text-left">
 			<h2 class="card-title">Accuracy Analysis</h2>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, debitis.</p>
+			<p>Measures shot accuracy based on the selected location of each stroke to identify efficiency of bounded strokes</p>
 			<div class="card-actions justify-between">
 				<a href="/analyse/accuracy/corner" class="btn btn-primary">Corner view</a>
 				<a href="/analyse/accuracy/back" class="btn btn-primary">Back view</a>
@@ -23,16 +23,16 @@
 			</div>
 		</div>
 	</div>
-	<div class="card card-compact bg-base-100 w-80 shadow-xl text-black">
+	<div class="card card-compact bg-base-100 w-72 shadow-xl text-black">
 		<figure>
 			<img
-					src="{% static 'img/logo.jpeg' %}"
+					src="{% static 'img/rally3.png' %}"
 					alt="Shoes"
-					width="320px" />
+					width="288px" />
 		</figure>
-		<div class="card-body">
+		<div class="card-body text-left">
 			<h2 class="card-title">Rally Analysis</h2>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, debitis.</p>
+			<p>Analyzes rally patterns by tracking player and shuttle movements to determine trends and optimize overall performance.</p>
 			<div class="card-actions justify-between">
 				<a href="/analyse/rally/corner" class="btn btn-primary">Corner view</a>
 				<a href="/analyse/rally/back" class="btn btn-primary">Back view</a>
@@ -40,16 +40,16 @@
 			</div>
 		</div>
 	</div>
-	<div class="card card-compact bg-base-100 w-80 shadow-xl text-black">
+	<div class="card card-compact bg-base-100 w-72 shadow-xl text-black">
 		<figure>
 			<img
-					src="{% static 'img/logo.jpeg' %}"
+					src="{% static 'img/shad3.png' %}"
 					alt="Shoes"
-					width="320px" />
+					width="288px" />
 		</figure>
-		<div class="card-body">
+		<div class="card-body text-left">
 			<h2 class="card-title">Shadow Analysis</h2>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, debitis.</p>
+			<p>Utilizes shadow training data to determine speed, reflex and movement efficiency</p>
 			<div class="card-actions justify-between">
 				<a href="/analyse/shadow/corner" class="btn btn-primary">Corner view</a>
 				<a href="/analyse/shadow/back" class="btn btn-primary">Back view</a>
