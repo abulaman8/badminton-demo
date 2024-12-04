@@ -134,6 +134,8 @@ def formpage(request, action, view):
             "img": mc[action][view].get("img1"),
             "title1": mc[action][view].get("title1"),
             "title2": mc[action][view].get("title2"),
+            "action": action,
+            "view": view
         }
 
         return render(request, 'base/output.html', context)

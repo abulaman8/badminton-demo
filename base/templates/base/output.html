@@ -9,6 +9,9 @@
 <div class="flex lg:flex-row flex-col p-4 justify-around gap-4 text-left max-h-[88vh]">
 	<div class="flex w-full flex-col justify-around items-center">
 		<h3 class="text-3xl">{{ title1 }}</h3>
+		{% if action == 'accuracy' %}
+		<h4 class="text-xl my-2">Accuracy: 7/15 (46%)</h4>
+		{% endif %}
 		<video class="video-js" controls preload="auto" style="width: 90%; height: 90%; background-color: transparent">
 			<source src="{{ vid1 }}" type="video/mp4">
 			<p class="vjs-no-js">

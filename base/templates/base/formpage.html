@@ -68,40 +68,8 @@
 				<button id="submitButton" class="btn btn-secondary mt-4" type="submit">Submit</button>
 			</form>
 
-			<!-- Loading indicator (hidden by default) -->
-			<div id="loadingIndicator" class="hidden mt-4 flex justify-center items-center">
-				<div class="radial-progress animate-spin text-secondary" style="--value:70; --size:4rem; --thickness:6px;"></div>
-			</div>
 		</div>
 	</div>
 </div>
 {% endblock %}
 
-{% block custom_js %}
-<script>
-	document.addEventListener('DOMContentLoaded', () => {
-		const form = document.getElementById('delayedForm');
-		const submitButton = document.getElementById('submitButton');
-		const loadingIndicator = document.getElementById('loadingIndicator');
-
-		form.addEventListener('submit', (event) => {
-			event.preventDefault(); // Prevent immediate form submission
-
-			// Show loading indicator
-			loadingIndicator.classList.remove('hidden');
-
-			// Disable submit button to prevent multiple submissions
-			submitButton.disabled = true;
-
-			// Generate a random delay between 3 and 6 seconds
-			const delay = Math.random() * (15 - 10) + 10;
-
-			// Delay form submission
-			setTimeout(() => {
-				form.submit(); // Submit the form after the delay
-			}, delay * 1000); // Convert seconds to milliseconds
-		});
-	});
-
-</script>
-{% endblock %}
