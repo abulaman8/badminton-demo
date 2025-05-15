@@ -62,10 +62,9 @@
 		</div>
 		<div class="flex w-full flex-col justify-center">
 			<img src="{% if view == 'back' %}{% static "img/back.jpeg" %}{% else %}{% static "img/corner.jpeg" %}{% endif %}" alt="view image" height="400px">
-			<form id="delayedForm" action="/analyse/{{ action }}/{{ view }}" method="post" enctype="multipart/form-data">
+			<form id="delayedForm" action="/analyse/{{ action }}/{{ view }}" method="post" enctype="multipart/form-data" class="flex justify-center">
 				{% csrf_token %}
-				<input type="file" class="file-input file-input-bordered file-input-accent w-full max-w-xs" name="file" />
-				<button id="submitButton" class="btn btn-secondary mt-4" type="submit">Submit</button>
+				<button id="submitButton" class="btn btn-secondary mt-4" type="submit">View Outputs</button>
 			</form>
 
 		</div>

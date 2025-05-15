@@ -19,7 +19,7 @@
 	<h2 class="text-6xl">Shuttle Smart Vision</h2>
 	<h3 class="text-3xl">Analyze, Improve, Achieve</h3>
 	</div>
-	<a href="{% if user.is_authenticated %}{% url 'dashboard' %}{% else %}{% url 'signup' %}{% endif %}" class="btn btn-secondary mt-4">
+	<a href="{% url 'dashboard' %}" class="btn btn-secondary mt-4">
 		Get Started
 	</a>
 	

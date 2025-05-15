@@ -6,3 +6,4 @@ wheels/
 
 # Virtual environments
 .venv
+venv/
