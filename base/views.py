@@ -17,14 +17,14 @@ def formpage(request, action, view):
                 "corner": {
                     "title1": "Shadow Analysis",
                     "title2": "Minimap",
-                    "vid1": staticfiles_storage.url("vid/sample.mp4"),
-                    "img1": staticfiles_storage.url("img/bg.jpeg"),
+                    "vid1": staticfiles_storage.url("vid/output.mp4"),
+                    "img1": staticfiles_storage.url("img/shadow.jpeg"),
                 },
                 "back": {
                     "title1": "Shadow Analysis",
                     "title2": "Minimap",
-                    "vid1": staticfiles_storage.url("vid/sample.mp4"),
-                    "img1": staticfiles_storage.url("img/bg.jpeg"),
+                    "vid1": staticfiles_storage.url("vid/output.mp4"),
+                    "img1": staticfiles_storage.url("img/shadow.jpeg"),
                 }
             },
             "rally": {
@@ -48,7 +48,9 @@ def formpage(request, action, view):
                 },
                 "back": {
                     "title1": "Accuracy Analysis",
+                    "title2": "Visualization",
                     "vid1": staticfiles_storage.url("vid/acc_output.mp4"),
+                    "img1": staticfiles_storage.url("img/accuracy2.jpeg")
                 }
             }
         }
